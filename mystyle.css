@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --green: #4CAF50;
+    --red: #bc4749;
+    --black:#000000;
+    --white:#ffffff;
+    --blue: #34006a;
+    --header:#f2d307;
+    --borderCol:#ccc;
+    --fontFamily: system-ui;
+}
+button{
+        background-color:var(--blue);
+        border: none;
+        color: var(--white);
+        padding: 12px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 10px;
+        cursor: pointer;
+}
+.add-expense-button{
+    padding-left: 80px;
+}
+.add-income-button{
+    padding-left: 80px;
+}
+body {
+    margin:0 0 0 0;
+    background-color:var(--header);
+    font-family: var(--fontFamily)
+}
+/**********Main Container********/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+/*********HEADER OUTPUT***********/
+.output-container{
+    display: flex;
+    justify-content: space-around;
+    background-color:var(--header);
+    height:70px;
+}
+.income-container{
+    color:var(--green);
+    font-size: larger;
+    font-weight: bold;
+}
+.expense-container{
+    color:var(--red);
+    font-size: larger;
+    font-weight: bold;
+}
+.balance-container{
+    color:var(--blue);
+    font-size: larger;
+    font-weight: bold;
+}
+/***************For Display Enry**************/
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+.info-mgmt{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/***************Entry Section**************/
+.entry-container{
+    display: flex;
+    justify-content: space-around;
+    background-image: url(./images/budgetPic.jpg);
+    flex-direction: column;
+}
+/******************ALL DISPLAY INCOME+EXPENSES*************/
+.entry-container #all{
+    width: 500px;
+    height: 450px;
+    position: relative;
+    background-color: var(--white);
+    font-family: var(--fontFamily);
+    color: var(--red);
+    font-size: medium;
+    border-bottom:3px solid var(--borderCol);
+}
+.entry-container #all ul{
+    max-width: 100%;
+    max-height: 100%;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    margin-top:20px;
+    overflow-x: auto;
+    background-color: var(--white);
+}
+.entry-container #all ul.list li{
+    position: relative;
+    font-size: 1.2em;
+}
+
+.entry-container #all ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+.entry-container #all ul.list li .entry{
+    width:auto;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: var(--fontFamily)
+}
+
+.entry-container #all ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url('images/trash.jpeg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+.entry-container input{
+    /* MAKE INPUT SELECTABLE */
+    -webkit-user-select: auto;      
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+.entry-container #all ul.list li.expense{
+    color:var(--red);
+}
+.entry-container #all ul.list li.income{
+    color:var(--green);
+}
+
+/*  EXPENSE  */
+.entry-container #expense{
+    width: 500px;
+    height: 450px;
+    position: relative;
+    background-color: var(--white);
+    font-family: var(--fontFamily);
+    color: var(--red);
+    font-size: medium;
+}
+.entry-container #expense .input{
+    position: absolute;
+    display: block;
+    width: 500px;
+    bottom: 0;
+    border-top: 1px solid var(--borderCol);
+    border-bottom:3px solid var(--borderCol);
+}
+
+.entry-container #expense .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+.entry-container #expense .input input#expense-title-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: var(--fontFamily);
+    margin: 5px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+.entry-container #expense .input input#expense-amount-input{
+    height: 40px;
+    width : 75px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family:var(--fontFamily);
+    margin: 5px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.entry-container #expense ul{
+    max-width: 100%;
+    max-height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+.entry-container #expense ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+.entry-container #expense ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+.entry-container #expense ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: var(--fontFamily);
+}
+.entry-container #expense ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url('images/trash.jpeg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+/********************INCOME**********************/
+
+.entry-container #income{
+    width: 500px;
+    height: 450px;
+    position: relative;
+    background-color: var(--white);
+    font-family: var(--fontFamily);
+    color: var(--green);
+    font-size: medium;
+}
+
+.entry-container #income .input{
+    position: absolute;
+    display: block;
+    width: 500px;
+    bottom: 0;
+    border-top: 1px solid var(--borderCol);
+    border-bottom:3px solid var(--borderCol);
+}
+
+.entry-container #income .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+.entry-container #expense ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+.entry-container #income .input input#income-title-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family:var(--fontFamily);
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+.entry-container #income .input input#income-amount-input{
+    height: 40px;
+    width : 75px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family:var(--fontFamily);
+    margin: 5px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+.entry-container #income ul{
+    max-width: 100%;
+    max-height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+.entry-container #income ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+.entry-container #income ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+.entry-container #income ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: var(--fontFamily);
+}
+.entry-container #income ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url('images/trash.jpeg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+*/**************************************************/
+.entry-container #expense ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+/**********************TOGGLE FOR INPUT/EXPENCES/ALL**************/
+.toggle{
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.toggle .all-btn,.income-btn,.expence-btn{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--blue);
+    font-family: var(--fontFamily);
+    opacity: 0.4;
+}
+.toggle .income-btn, .all-btn{
+    margin-left: 10px;
+}
+.active{
+    opacity : 2 !important;
+}
+.hide{
+    display: none;
+}
+/*******************************************************/
+
+
