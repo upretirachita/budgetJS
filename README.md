@@ -5,7 +5,8 @@
 #delete income from INCOME
 #delete expense FROM EXPENSE
 #delete from ALL(INCOME/EXPENSE)
-#Its completly in Vanilla JS Enjoy coading!
+#Its completely in Vanilla JS Enjoy coding!
+#CSSFLEX with responsive enviroment
 
 
 ![budPic1](https://user-images.githubusercontent.com/29287817/220342733-1e93e4a5-1e0b-4cc1-ab37-079d9f0d046e.JPG)
