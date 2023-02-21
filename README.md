@@ -6,6 +6,7 @@
 #delete expense FROM EXPENSE
 #delete from ALL(INCOME/EXPENSE)
 #CSSFLEX#Responsive
+#Its completly in Vanilla JS Enjoy coading!
 
 
 ![budPic1](https://user-images.githubusercontent.com/29287817/220342733-1e93e4a5-1e0b-4cc1-ab37-079d9f0d046e.JPG)
