@@ -1,4 +1,5 @@
 # budgetJS
+#HTML CSS JS and and localStorage
 #add incomes
 #add expences
 #calculate balance
@@ -6,8 +7,6 @@
 #delete expense FROM EXPENSE
 #delete from ALL(INCOME/EXPENSE)
 #Its completely in Vanilla JS Enjoy coding!
-#CSSFLEX with responsive enviroment
-
 
 ![budPic1](https://user-images.githubusercontent.com/29287817/220342733-1e93e4a5-1e0b-4cc1-ab37-079d9f0d046e.JPG)
 ![budPic2](https://user-images.githubusercontent.com/29287817/220342743-a1f92c39-83a0-4328-9e98-b6574c9cc0a0.JPG)
